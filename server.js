@@ -53,12 +53,10 @@ app.patch('/users/:id/roles', async (req, res) => {
 
     let rolesToSet = [];
     if (Array.isArray(roleIds) && roleIds.length > 0) {
-      console.log(roleIds);
       rolesToSet = await Role.findAll({ where: { id: roleIds } });
     } else {
       return res.status(400).json({ error: 'Provide roleIds array' });
-    }
-console.log(rolesToSet);  
+    } 
     await user.setRoles(rolesToSet);
 
     const updated = await User.findByPk(id, {

@@ -1,19 +1,19 @@
-# Dependency directory
-node_modules
+# Node dependencies
+node_modules/
 
 # Environment variables
 .env
 
-# Editors
+# Editors and IDEs
 .idea/
-.vscode
-.tern-project
+.vscode/
 *.iml
-.eslintcache
 
-# Text coverage
-coverage
-.nyc_output
+# Coverage & reports
+coverage/
+.nyc_output/
 
+# System files
 .DS_Store
 .eslintcache
+.tern-project
